@@ -1,6 +1,6 @@
 <template>
   <TopBarComp />
-  <main class="w-screen h-screen bg-grandient-ang">
+  <main class="w-screen h-screen bg-grandient-ang px-8 2xl:px-48 xl:px-24">
     <MainBarComp />
     <router-view />
     <TestComp />
