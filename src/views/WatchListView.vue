@@ -1,6 +1,8 @@
 <template>
-  <h1>WatchList</h1>
-  <TableComp />
+  <div class="sm:invisible">
+    <p class="text-xs text-gray-400 text-right pb-1">Scroll right --></p>
+  </div>
+  <TableComp watchlist="true" />
 </template>
 
 <script>

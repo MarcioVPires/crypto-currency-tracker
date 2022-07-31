@@ -11,4 +11,10 @@
       #21406c 100%
     );
   }
+  .no-scrollbar::-webkit-scrollbar,
+  .no-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
