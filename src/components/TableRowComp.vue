@@ -22,17 +22,17 @@
       <div
         class="min-w-[50%] h-full text-center text-xs sm:min-w-[12%] flex justify-center items-center"
       >
-        <p>{{ coin.current_price }}</p>
+        <p>{{ formCurrency.format(coin.current_price) }}</p>
       </div>
       <div
         class="min-w-[50%] h-full text-center text-xs sm:min-w-[12%] flex justify-center items-center"
       >
-        <p>{{ coin.market_cap }}</p>
+        <p>{{ formCurrency.format(coin.market_cap) }}</p>
       </div>
       <div
         class="min-w-[50%] h-full text-center text-xs sm:min-w-[12%] flex justify-center items-center"
       >
-        <p>{{ coin.total_volume }}</p>
+        <p>{{ formCurrency.format(coin.total_volume) }}</p>
       </div>
       <div
         class="min-w-[50%] h-full text-center text-xs sm:min-w-[12%] flex justify-center items-center"
@@ -42,19 +42,26 @@
       <div
         class="min-w-[50%] h-full text-center text-xs sm:min-w-[12%] flex justify-center items-center"
       >
-        <p>Last Week</p>
+        <p></p>
       </div>
       <div
         class="min-w-[50%] h-full text-center text-xs sm:min-w-[12%] flex justify-center items-center"
       >
-        <p>Notify</p>
+        <p></p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import formCurrency from "@/utils/formatmoney";
+
 export default {
   props: ["coin"],
+  setup() {
+    return {
+      formCurrency,
+    };
+  },
 };
 </script>
