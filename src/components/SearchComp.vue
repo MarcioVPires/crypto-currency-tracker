@@ -4,7 +4,9 @@
       aria-label="search"
       placeholder="insert a coin name"
       type="text"
-      class="w-full rounded-full h-9 bg-[#3C516F] pl-12"
+      class="w-full rounded-full h-9 bg-[#3C516F] pl-12 text-white"
+      :value="inputValue"
+      @input="updateValue"
     />
     <img :src="[searchIcon]" alt="" class="absolute top-1.5 left-3 w-6" />
   </div>
@@ -12,14 +14,22 @@
 
 <script>
 import searchIcon from "@/assets/img/search-icon.svg";
+import { ref } from "vue";
 
 export default {
   name: "SearchComp",
-  data() {
+  setup(p, { emit }) {
+    const inputValue = ref("");
+
+    function updateValue(param) {
+      inputValue.value = param.target.value;
+      emit("search", param.target.value);
+    }
     return {
       searchIcon,
+      inputValue,
+      updateValue,
     };
   },
-  methods() {},
 };
 </script>
