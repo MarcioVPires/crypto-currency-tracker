@@ -11,7 +11,7 @@ To install this project and run locally follow the steps bellow:
 Download or Clone the repository:
 
 ```
-git clone git@github.com:MarcioVPires/api-crypto-currency-tracker.git
+git clone git@github.com:MarcioVPires/crypto-currency-tracker.git
 ```
 
 Install the dependencies:
@@ -23,7 +23,7 @@ npm install
 Run the project:
 
 ```
-npm run
+npm run serve
 ```
 
 To configure a Local API please edit the api.js file inside src/services. Change the baseURL to your localhost.
