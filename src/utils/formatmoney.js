@@ -1,6 +1,6 @@
 const formCurrency = new Intl.NumberFormat("id", {
   style: "currency",
-  currency: "US",
+  currency: "USD",
   minimumFractionDigits: 2,
 });
 

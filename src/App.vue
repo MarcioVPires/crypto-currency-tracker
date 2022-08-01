@@ -24,7 +24,7 @@ export default {
     const getList = get("/coins");
     const watchlist = ref(null);
     const filter = ref("");
-    const price = ref("");
+    // const price = ref("");
     onMounted(getList);
 
     function updateWatchlistStatus(param) {
