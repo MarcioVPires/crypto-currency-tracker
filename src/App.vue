@@ -1,6 +1,6 @@
 <template>
   <TopBarComp />
-  <main class="w-screen h-screen bg-grandient-ang px-8 2xl:px-48 xl:px-24">
+  <main class="w-screen h-screen overflow-x-hidden bg-grandient-ang px-8 2xl:px-48 xl:px-24">
     <MainBarComp :page="watchlist" @search="filter = $event" />
     <router-view v-slot="{ Component }">
       <component :is="Component" :page="watchlist" @update="updateWatchlistStatus" />
