@@ -24,25 +24,12 @@ export default {
     const getList = get("/coins");
     const watchlist = ref(null);
     const filter = ref("");
-    // const price = ref("");
     onMounted(getList);
 
     function updateWatchlistStatus(param) {
       watchlist.value = param;
     }
 
-    // async function updatePrice() {
-    //   const prices = await get("/get-current-price");
-    //   price.value = prices;
-    //   console.log(price.value);
-    // }
-
-    // onMounted(updatePrice());
-
-    // setInterval(() => {
-    //   console.log("interval");
-    //   updatePrice();
-    // }, 5000);
     return { watchlist, filter, updateWatchlistStatus };
   },
   watch: {
