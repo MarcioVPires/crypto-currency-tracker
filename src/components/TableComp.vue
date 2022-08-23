@@ -84,6 +84,7 @@ import formCurrency from "@/utils/formatmoney";
 export default {
   name: "TableComp",
   components: {},
+  props: ["page"],
   setup() {
     const propNames = [
       "Last Hour",

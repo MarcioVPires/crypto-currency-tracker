@@ -1,5 +1,5 @@
 <template>
-  <TableComp />
+  <TableComp page="allcoins" />
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <TableComp :page="page" />
+  <TableComp page="watchlist" />
 </template>
 
 <script>
