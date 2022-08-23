@@ -1,7 +1,7 @@
 <template>
   <TopBarComp />
   <main class="w-screen h-screen overflow-x-hidden bg-grandient-ang px-8 2xl:px-48 xl:px-24">
-    <MainBarComp :page="watchlist" @search="filter = $event" />
+    <AppNav :page="watchlist" @search="filter = $event" />
     <router-view v-slot="{ Component }">
       <component :is="Component" :page="watchlist" @update="updateWatchlistStatus" />
     </router-view>
@@ -11,14 +11,14 @@
 <script>
 import { onMounted, ref } from "vue";
 import TopBarComp from "@/components/TopBarComp.vue";
-import MainBarComp from "@/components/MainBarComp.vue";
+import AppNav from "@/components/AppNav.vue";
 import { get } from "@/services/methods";
 
 export default {
   name: "App",
   components: {
     TopBarComp,
-    MainBarComp,
+    AppNav,
   },
   setup() {
     const getList = get("/coins");
